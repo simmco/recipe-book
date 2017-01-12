@@ -1,0 +1,74 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.App-header {
+  background-color: #222;
+  max-height: 50px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.App-header h2 {
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.button__addRecipe{
+  float:right;
+  height: 20px;
+}
+
+.list-group {
+  margin: 2rem auto;
+}
+
+.recipe {
+  font-weight: 900;
+  color: inherit;
+  text-decoration: none;
+  text-align:center;
+}
+
+.recipe__panel {
+  max-height: 60px;
+}
+.recipe:hover {
+ color: inherit;
+ text-decoration:none;
+ cursor:pointer;
+}
+
+.recipeDetail {
+  margin: 0 auto;
+  padding: 3rem 6rem;
+  max-width: 480px;
+  border: 2px solid #D3D3D3;
+}
+
+.recipeDetail__listgroup{
+  max-width: 320px;
+}
+
+.recipeDetail__listgroupItem{
+  display: flex;
+}
+
+.recipeDetail__ingredientsName {
+  flex-grow: 4;
+}
+
+.recipeDetail__ingredientsDelete {
+  flex-grow: 1;
+}
+
+.recipeDetail__ingredientsDelete p {
+  text-align: right;
+  cursor: pointer;
+}
