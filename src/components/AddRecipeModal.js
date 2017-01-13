@@ -38,7 +38,7 @@ class AddRecipeModal extends Component  {
       <Modal {...this.props} bsSize="medium" aria-labelledby="contained-modal-title-sm">
       <form onSubmit={this.newRecipeSubmit}>
        <Modal.Header closeButton>
-         <Modal.Title id="contained-modal-title-sm">Add Recipe</Modal.Title>
+         <Modal.Title id="contained-modal-title-sm">Add a new Recipe</Modal.Title>
        </Modal.Header>
        <Modal.Body>
            <FormGroup controlId="Recipe">
