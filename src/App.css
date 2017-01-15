@@ -20,9 +20,29 @@ body {
   font-size: large;
 }
 
-.button__addRecipe{
-  float:right;
-  height: 20px;
+.form__addIngredient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__recipeDetail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__recipeDetail-close {
+  float: right;
+  font-size: 400;
+  font-size: 2em;
+  text-align: right;
+  color: #D3D3D3;
+  cursor: pointer;
+}
+
+.btn__recipeDetail-m-right {
+  margin-right: 3rem;
 }
 
 .list-group {
@@ -71,4 +91,5 @@ body {
 .recipeDetail__ingredientsDelete p {
   text-align: right;
   cursor: pointer;
+  color: #d9534f;
 }

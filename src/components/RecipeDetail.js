@@ -15,6 +15,10 @@ class RecipeDetail extends Component {
       ingredient: ''
     }
   }
+  handleClose = () => {
+    this.props.deselectedRecipe(this.props.recipe[0]);
+    this.setState({addIngredient: false})
+  }
   addIngClicked = () => {
     if(this.state.addIngredient === false) {
       this.setState({addIngredient: true});
@@ -54,7 +58,7 @@ class RecipeDetail extends Component {
           let ingredientClicked = this.handleIngDelete.bind(this, ing);
           return  <ListGroupItem  className="recipeDetail__listgroupItem" key={ing.id}>
                     <div className="recipeDetail__ingredientsName">
-                      {ing.name}
+                      <p className="lead"> {ing.name} </p>
                     </div>
                     <div className="recipeDetail__ingredientsDelete">
                       <p onClick={ingredientClicked}>&#10006;</p>
@@ -69,17 +73,20 @@ class RecipeDetail extends Component {
     var buttonIngClicked = this.state.addIngredient;
     return(
       <div className="recipeDetail">
+        <p className="btn__recipeDetail-close" onClick={this.handleClose}>X</p>
         {this.props.recipe.map(this.renderRecipe)}
         {buttonIngClicked &&
-          <form onSubmit={this.handleIngAdd}>
-            {/* <input type="text" onChange={this.addIng} value={this.state.ingredient}/> */}
-            <FormControl  type="text" value={this.state.ingredient} placeholder="Enter Ingredient" onChange={this.addIng} />
-            <Button bsStyle="success" type="submit">Add</Button>
-          </form>
+          <div >
+            <form className="form__addIngredient" onSubmit={this.handleIngAdd}>
+              <FormControl  type="text" value={this.state.ingredient} placeholder="Enter Ingredient" onChange={this.addIng} />
+            </form>
+          </div>
         }
         <br/>
-        <Button bsStyle="primary" onClick={this.addIngClicked}>Add Ingredient</Button>
-        <Button bsStyle="danger" onClick={this.handleDelete}>Delete Recipe</Button>
+        <div className="btn__recipeDetail">
+          <Button bsStyle="primary" className="btn__recipeDetail-m-right" onClick={this.addIngClicked}>Add Ingredient</Button>
+          <Button bsStyle="danger" onClick={this.handleDelete}>Delete Recipe</Button>
+        </div>
       </div>
     );
   }

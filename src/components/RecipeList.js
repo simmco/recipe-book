@@ -33,6 +33,7 @@ class RecipeList extends Component {
     return(
       <Grid>
         <Row>
+
           <Col xs={12} md={6}>
             <Jumbotron>
               {renderRecipes()}

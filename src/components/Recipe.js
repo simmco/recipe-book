@@ -17,18 +17,9 @@ class Recipe extends Component {
     this.props.deselectAll();
   }
   recipeClicked = (e) => {
-    console.log(this.props);
     e.preventDefault();
-    if(this.state.detailClicked === false) {
-        this.setState({detailClicked: true})
-        this.props.deselectAll();
-        this.props.selectedRecipe(this.props);
-      } else {
-        this.setState({detailClicked: false})
-        this.props.deselectedRecipe(this.props);
-      }
-
-
+    this.props.deselectAll();
+    this.props.selectedRecipe(this.props);
   }
   render() {
     var {name, id} = this.props;

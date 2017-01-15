@@ -12,7 +12,7 @@ class AddRecipe extends Component  {
     let lgClose = () => this.setState({ lgShow: false });
 
     return (
-      <ButtonToolbar className="button__addRecipe" >
+      <ButtonToolbar  >
         <Button bsStyle="primary" bsSize="medium"onClick={()=>this.setState({ lgShow: true })}>
           Add Recipe
         </Button>
