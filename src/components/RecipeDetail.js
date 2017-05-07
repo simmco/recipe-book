@@ -52,7 +52,7 @@ class RecipeDetail extends Component {
   renderRecipe = (recipe) => {
     return(
       <div key={recipe.id}>
-      <h3 className="text-center"><u>{recipe.name}</u></h3>
+      <h3 className="recipeDetail__header">{recipe.name}</h3>
       <ListGroup className="recipeDetail__listgroup">
         {recipe.ingredients.map((ing) => {
           let ingredientClicked = this.handleIngDelete.bind(this, ing);
